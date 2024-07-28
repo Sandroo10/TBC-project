@@ -1,0 +1,107 @@
+.button-menu {
+    z-index: 90;
+    grid-row-gap: 12px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+}
+
+.buttons {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: transform 0.3s ease;
+    margin-bottom: 58px;
+}
+.button-menu_trigger {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #424A4D;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.icon-collapse {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.icon-expand {
+    display: none;
+}
+
+.expanded .buttons {
+    display: flex;
+}
+
+.expanded .icon-collapse {
+    display: none;
+}
+
+.expanded .icon-expand {
+    display: block;
+}
+
+.button-menu_button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    position: relative; 
+    margin-bottom: 10px;
+}
+.button-menu_button:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+.button-menu_tooltip {
+    display: none;
+    position: absolute;
+    right: 60px;
+    background-color: #424A4D;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.button-menu_tooltip-arrow {
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    transform: translateY(-50%);
+    fill: #424A4D;
+}
+.button-menu_button:hover .button-menu_tooltip {
+    display: block;
+}
+.button-menu_trigger:hover {
+    background-color: #343a3d;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+.icon svg, .icon-collapse svg, .icon-expand svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
