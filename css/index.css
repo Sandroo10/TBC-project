@@ -433,6 +433,22 @@ a {
 .grid-card:hover .grid-card_img-wrapper {
     transform: scale(1.1); 
 }
+@media (max-width: 767px) {
+    .grid-2-col {
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+    }
+
+    .grid-card {
+        min-height: 332px;
+        width: 280px;
+        margin: 0 auto;
+    }
+
+    .grid-card_img-wrapper {
+        border-radius: 8px;
+    }
+}
 
 
 
@@ -452,6 +468,8 @@ a {
     flex: 1;
     align-items: flex-start;
     padding: 40px 48px;
+    width: 350px;
+    height: 190px;
     font-size: 16px;
     font-weight: 500;
     display: flex;
@@ -461,6 +479,22 @@ a {
     font-size: 44px;
     font-weight: 700;
     line-height: 1.3;
+}
+@media (max-width: 767px) {
+    .numbers {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .numbers_item {
+        align-items: center; 
+        text-align: center; 
+        padding: 20px; 
+    }
+
+    .numbers_number {
+        font-size: 36px; 
+    }
 }
 
 
@@ -527,6 +561,53 @@ a {
     bottom: 0;
     left: auto;
     right: 0;
+}
+@media (max-width: 768px) {
+    .get-app_inner {
+        flex-direction: column;
+        min-height: auto;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .get-app_content {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .get-app_buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    .get-app_img {
+        position: relative;
+        max-height: 200px;
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .app-button {
+        width: 80%;
+        font-size: 16px;
+        padding: 16px;
+        margin-bottom: 16px;
+    }
+
+    .app-button:last-child {
+        display: none;
+    }
+
+    .app-button:first-child {
+        width: 80%;
+        font-size: 16px;
+        padding: 16px;
+        margin-bottom: 16px;
+        text-align: center;
+    }
 }
 
 
